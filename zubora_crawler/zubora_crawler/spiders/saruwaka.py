@@ -34,7 +34,7 @@ class SaruwakaSpider(scrapy.Spider):
 
     def parse(self, response):
         urls = [url for url in response.xpath('//article/a/@href').extract()]
-        for url in urls[:5]:
+        for url in urls:
             yield Request(url=url, callback=self.parse_detail)
 
     def parse_detail(self, response):
