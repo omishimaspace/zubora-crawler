@@ -15,6 +15,9 @@ class DefaultValuesPipeline(object):
         for col in REQUIRED:
             if col not in item:
                 raise DropItem(f'{col} is required.')
+        item.setdefault('kitchenware', None)
+        item.setdefault('elapsed_minutes', None)
+        item.setdefault('category', None)
         return item
 
 
