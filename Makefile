@@ -19,6 +19,5 @@ scrapyshell:
 	${SCRAPY} shell ${URL}
 
 run:
-	${SCRAPY} runspider zubora_crawler/spiders/${SPIDER_NAME}.py
-
+	${SCRAPY} runspider zubora_crawler/spiders/${SPIDER_NAME}.py -o output.json
 

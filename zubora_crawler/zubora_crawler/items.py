@@ -7,8 +7,17 @@
 
 import scrapy
 
+REQUIRED = (
+    'title',
+    'description',
+    'original_url',
+)
 
-class ZuboraCrawlerItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+
+class RecipeItem(scrapy.Item):
+    original_url = scrapy.Field()
+    title = scrapy.Field()
+    description = scrapy.Field()
+    kitchenware = scrapy.Field()
+    ingredients = scrapy.Field()
+    steps = scrapy.Field()
