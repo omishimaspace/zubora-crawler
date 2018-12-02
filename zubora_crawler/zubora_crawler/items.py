@@ -8,7 +8,7 @@
 import scrapy
 
 REQUIRED = (
-    'title',
+    'name',
     'description',
     'original_url',
     'steps',
